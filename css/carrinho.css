@@ -1,0 +1,214 @@
+/* Estilos para a página do carrinho */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.carrinho {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.carrinho:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.lista-produtos {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.lista-produtos li {
+    padding: 15px;
+    border-bottom: 2px solid #eee;
+    transition: background-color 0.3s ease-in-out;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lista-produtos li:hover {
+    background-color: #f9f9f9;
+}
+
+.total {
+    margin-top: 20px;
+    text-align: right;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 0;
+}
+
+.pagamento, .endereco, .cartao {
+    margin: 20px 0;
+    text-align: left;
+}
+
+.pagamento h3, .endereco h3, .cartao h3 {
+    margin-bottom: 10px;
+}
+
+.pagamento label, .endereco label, .cartao label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.pagamento input, .endereco input, .cartao input {
+    margin-right: 10px;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    display: none;
+}
+
+.mensagem-compra {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #28a745;
+    border-radius: 5px;
+    background-color: #d4edda;
+    color: #155724;
+    text-align: center;
+    display: none;
+}
+
+/* Custom radio button styling */
+.radio-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    user-select: none;
+}
+
+.radio-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+.radio-container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+.radio-container input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.radio-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.radio-container .checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+.btn-finalizar, .btn-voltar, .btn-remover-tudo {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+}
+
+.btn-finalizar:hover, .btn-voltar:hover, .btn-remover-tudo:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #2d30e7;
+    color: white;
+    margin-top: 30px;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .carrinho {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .btn-finalizar, .btn-voltar, .btn-remover-tudo {
+        padding: 10px;
+        font-size: 14px; /* Tamanho menor para dispositivos móveis */
+    }
+}
+
+/* Feedback visual para botões */
+.btn-finalizar:active, .btn-voltar:active, .btn-remover-tudo:active {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transform: translateY(1px); /* Efeito de pressionar o botão */
+}
+
+/* Estilização para lista vazia */
+.lista-produtos:empty:before {
+    content: "Seu carrinho está vazio. Adicione produtos!";
+    display: block;
+    text-align: center;
+    padding: 20px;
+    color: #aaa;
+}
+
+/* Hover nos itens do carrinho */
+.lista-produtos li:hover {
+    background-color: #f0f0f0;
+    color: #000; /* Mudança na cor do texto */
+    cursor: pointer;
+}
+
+/* Separadores mais distintos */
+.lista-produtos li {
+    border-bottom: 3px dashed #ddd; /* Tornando o separador mais visível */
+}

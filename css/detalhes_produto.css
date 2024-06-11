@@ -1,0 +1,144 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: orange;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.produto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.galeria-imagens {
+    margin-right: 20px;
+}
+
+.galeria-imagens img {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.miniaturas img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.detalhes-produto {
+    max-width: 400px;
+}
+
+.detalhes-produto h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.detalhes-produto p {
+    margin-bottom: 20px;
+}
+
+.btn-adicionar-carrinho {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-adicionar-carrinho:hover {
+    background-color: #0056b3;
+}
+
+.avaliacoes {
+    max-width: 600px;
+    width: 100%;
+    text-align: left;
+}
+
+.avaliacoes h3 {
+    margin-bottom: 20px;
+}
+
+.avaliacoes ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+.avaliacoes li {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 5px;
+}
+
+form input, form textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+form button {
+    align-self: flex-end;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}

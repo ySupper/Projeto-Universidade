@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estilo.css">
+    <title>Entre em Contato</title>
+</head>
+<body class="homepage">
+    <header>
+        <h1>
+            <a href="index.html" class="header-title-link">CONSTRUTOR HOUSE CENTER</a>
+        </h1>
+        <nav>
+            <ul>
+                <li id="produtos-dropdown" class="dropdown">
+                    <a href="#" class="dropbtn">Produtos</a>
+                    <div class="dropdown-content" id="produtos-menu">
+                        <a href="hidraulica.html">Hidráulica</a>
+                        <a href="eletrica.html">Elétrica</a>
+                        <a href="pesados.html">Materiais Pesados</a>
+                    </div>
+                </li>
+                <li><a href="contato.html">Entre em Contato</a></li>
+                <li><a href="carrinho.html">Carrinho</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+            </ul>
+        </nav>
+        <form id="search-form" action="javascript:void(0);" class="search-bar">
+            <input type="text" id="search-input" placeholder="Buscar produtos..." aria-label="Buscar produtos">
+            <button type="submit">Pesquisar</button>
+        </form>
+    </header>    
+    <section class="contato">
+        <div class="container">
+            <h2>Entre em Contato</h2>
+            <form id="contactForm" onsubmit="validateForm(event)">
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="assunto">Assunto:</label>
+                    <input type="text" id="assunto" name="assunto" required>
+                </div>
+                <div class="form-group">
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+    
+    <section class="informacoes-contato">
+        <div class="container">
+            <h2>Informações de Contato</h2>
+            <div>
+                <strong>Telefone:</strong> (XX) XXXX-XXXX<br>
+                <strong>Endereço:</strong> Rua Exemplo, 123 - Bairro - Cidade - Estado<br>
+                <strong>Email:</strong> exemplo@example.com
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        function validateForm(event) {
+            event.preventDefault();
+            const form = document.getElementById('contactForm');
+            if (form.checkValidity()) {
+                alert('Formulário enviado com sucesso!');
+                form.reset();
+            } else {
+                alert('Por favor, preencha todos os campos corretamente.');
+            }
+        }
+    </script>
+</body>
+</html>

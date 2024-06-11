@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materiais Pesados</title>
+    <link rel="stylesheet" href="../css/estilo.css">
+</head>
+<body class="homepage">
+    <header>
+        <h1>
+            <a href="index.html" class="header-title-link">CONSTRUTOR HOUSE CENTER</a>
+        </h1>
+        <nav>
+            <ul>
+                <li id="produtos-dropdown" class="dropdown">
+                    <a href="#" class="dropbtn">Produtos</a>
+                    <div class="dropdown-content" id="produtos-menu">
+                        <a href="hidraulica.html">Hidráulica</a>
+                        <a href="eletrica.html">Elétrica</a>
+                        <a href="pesados.html">Materiais Pesados</a>
+                    </div>
+                </li>
+                <li><a href="contato.html">Entre em Contato</a></li>
+                <li><a href="carrinho.html">Carrinho</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+            </ul>
+        </nav>
+        <form id="search-form" action="javascript:void(0);" class="search-bar">
+            <input type="text" id="search-input" placeholder="Buscar produtos..." aria-label="Buscar produtos">
+            <button type="submit">Pesquisar</button>
+        </form>
+    </header>    
+    <section class="itens" id="itemsContainer">
+        <!-- Os itens serão inseridos pelo JavaScript -->
+    </section>
+    <div id="notification" class="notification"></div>
+    <footer>
+        <p>&copy; 2024 Construtor House Center</p>
+    </footer>
+
+    <script src="produtos.js"></script>
+</body>
+</html>

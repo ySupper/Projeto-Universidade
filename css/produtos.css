@@ -1,0 +1,175 @@
+/* Estilos para os itens */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: orange;
+}
+
+.itens {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    transition: opacity 0.3s ease;
+}
+
+.item {
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 1;
+}
+
+.item.fade-out {
+    opacity: 0;
+}
+
+.item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.item img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+}
+
+.item h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.item p {
+    margin-bottom: 10px;
+}
+
+.item button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.item button:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+.item button.added {
+    background-color: #28a745 !important;
+    transform: scale(1.1);
+}
+
+.quantity {
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Estilos adicionais para os campos de entrada e funcionalidades novas */
+input[type='text'], input[type='number'], textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type='number'] {
+    width: auto; /* Ajuste para que o input de número não ocupe 100% */
+}
+
+input[type='text'] {
+    margin-bottom: 20px; /* Espaço extra abaixo da barra de pesquisa */
+}
+
+button[type='submit'], button[type='button'] { /* Estilização unificada para todos os botões */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button[type='submit']:hover, button[type='button']:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+/* Estilos para a notificação */
+.notification {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #28a745;
+    color: white;
+    padding: 20px 40px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    z-index: 1000;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.notification.show {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .item {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    header, footer {
+        padding: 10px;
+    }
+}

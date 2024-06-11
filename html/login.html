@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Construtor House Center</title>
+    <link rel="stylesheet" href="../css/estilo.css">
+</head>
+<body class="login-page">
+    <header>
+        <h1>
+            <a href="index.html" class="header-title-link">CONSTRUTOR HOUSE CENTER</a>
+        </h1>
+        <nav>
+            <ul>
+                <li id="produtos-dropdown" class="dropdown">
+                    <a href="#" class="dropbtn">Produtos</a>
+                    <div class="dropdown-content" id="produtos-menu">
+                        <a href="hidraulica.html">Hidráulica</a>
+                        <a href="eletrica.html">Elétrica</a>
+                        <a href="pesados.html">Materiais Pesados</a>
+                    </div>
+                </li>
+                <li><a href="contato.html">Entre em Contato</a></li>
+                <li><a href="carrinho.html">Carrinho</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+            </ul>
+        </nav>
+        <form id="search-form" action="javascript:void(0);" class="search-bar">
+            <input type="text" id="search-input" placeholder="Buscar produtos..." aria-label="Buscar produtos">
+            <button type="submit">Pesquisar</button>
+        </form>
+    </header>    
+
+    <div class="form-container">
+        <h2>Entre na sua Conta</h2>
+        <form id="loginForm" onsubmit="validateLogin(event)">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" required>
+            </div>
+            <button type="submit" class="btn">Login</button>
+        </form>
+        <p>Não tem uma conta? <a href="cadastro.html">Cadastre-se aqui</a></p>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Construtor House Center</p>
+    </footer>
+
+    <script>
+        function validateLogin(event) {
+            event.preventDefault();
+            const email = document.getElementById('email').value;
+            const senha = document.getElementById('senha').value;
+
+            // Validação simples apenas para demonstração
+            if (email === "user@example.com" && senha === "password") {
+                alert('Login bem-sucedido!');
+            } else {
+                alert('Email ou senha incorretos. Por favor, tente novamente.');
+            }
+        }
+    </script>
+</body>
+</html>

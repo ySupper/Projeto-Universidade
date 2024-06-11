@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Construtor House Center - Sua loja de materiais para construção e reforma.">
+    <title>Construtor House Center</title>
+    <link rel="stylesheet" href="../css/estilo.css">
+</head>
+<body class="homepage">
+    <header>
+        <h1>
+            <a href="index.html" class="header-title-link">CONSTRUTOR HOUSE CENTER</a>
+        </h1>
+        <nav>
+            <ul>
+                <li id="produtos-dropdown" class="dropdown">
+                    <a href="#" class="dropbtn">Produtos</a>
+                    <div class="dropdown-content" id="produtos-menu">
+                        <a href="hidraulica.html">Hidráulica</a>
+                        <a href="eletrica.html">Elétrica</a>
+                        <a href="pesados.html">Materiais Pesados</a>
+                    </div>
+                </li>
+                <li><a href="contato.html">Entre em Contato</a></li>
+                <li><a href="carrinho.html">Carrinho</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+            </ul>
+        </nav>
+        <form id="search-form" action="javascript:void(0);" class="search-bar">
+            <input type="text" id="search-input" placeholder="Buscar produtos..." aria-label="Buscar produtos">
+            <button type="submit">Pesquisar</button>
+        </form>
+    </header>    
+
+    <section class="banner">
+        <img src="banner.jpg" alt="Banner Promocional">
+    </section>
+    <section class="destaques">
+        <h2>Destaques</h2>
+        <div class="carrossel-container">
+            <div class="carrossel-slide active">
+                <img src="img1.jpg" alt="Imagem 1">
+                <div class="caption">Descrição da Imagem 1</div>
+            </div>
+            <div class="carrossel-slide">
+                <img src="img2.jpg" alt="Imagem 2">
+                <div class="caption">Descrição da Imagem 2</div>
+            </div>
+            <div class="carrossel-slide">
+                <img src="img3.jpg" alt="Imagem 3">
+                <div class="caption">Descrição da Imagem 3</div>
+            </div>
+            <!-- Adicione mais slides conforme necessário -->
+            <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+            <a class="next" onclick="moveSlide(1)">&#10095;</a>
+        </div>
+        <div class="dots">
+            <span class="dot active" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <!-- Adicione mais pontos conforme necessário -->
+        </div>        
+    </section>
+    <footer>
+        <p>&copy; 2024 Construtor House Center</p>
+        <div class="redes-sociais">
+            <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+            <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+            <a href="https://www.instagram.com/construtorhouse/"><img src="instagram-icon.png" alt="Instagram"></a>
+        </div>
+    </footer>    
+    <script src="carrosel.js"></script>
+</body>
+</html>

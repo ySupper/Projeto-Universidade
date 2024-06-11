@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estilo.css">
+    <title>Seu Carrinho</title>
+</head>
+<body class="homepage">
+    <header>
+        <h1>
+            <a href="index.html" class="header-title-link">CONSTRUTOR HOUSE CENTER</a>
+        </h1>
+        <nav>
+            <ul>
+                <li id="produtos-dropdown" class="dropdown">
+                    <a href="#" class="dropbtn">Produtos</a>
+                    <div class="dropdown-content" id="produtos-menu">
+                        <a href="hidraulica.html">Hidráulica</a>
+                        <a href="eletrica.html">Elétrica</a>
+                        <a href="pesados.html">Materiais Pesados</a>
+                    </div>
+                </li>
+                <li><a href="contato.html">Entre em Contato</a></li>
+                <li><a href="carrinho.html">Carrinho</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+            </ul>
+        </nav>
+        <form id="search-form" action="javascript:void(0);" class="search-bar">
+            <input type="text" id="search-input" placeholder="Buscar produtos..." aria-label="Buscar produtos">
+            <button type="submit">Pesquisar</button>
+        </form>
+    </header>    
+    <section class="carrinho">
+        <h2>Seu Carrinho</h2>
+        <ul class="lista-produtos"></ul>
+        <div class="total"><strong>Total:</strong> R$ <span id="total-carrinho">0.00</span></div>
+
+        <!-- Botão de Remover Tudo -->
+        <button class="btn-remover-tudo" aria-label="Remover todos os itens do carrinho">Remover Tudo</button>
+
+        <!-- Seção de Forma de Pagamento -->
+        <div class="pagamento">
+            <h3>Forma de Pagamento</h3>
+            <label class="radio-container">
+                <input type="radio" name="payment-method" value="credit-card" checked>
+                <span class="checkmark"></span>
+                Cartão de Crédito
+            </label>
+            <label class="radio-container">
+                <input type="radio" name="payment-method" value="paypal">
+                <span class="checkmark"></span>
+                PayPal
+            </label>
+            <label class="radio-container">
+                <input type="radio" name="payment-method" value="pix">
+                <span class="checkmark"></span>
+                PIX
+            </label>
+        </div>
+
+        <!-- Seção de Endereço de Entrega -->
+        <div class="endereco">
+            <h3>Endereço de Entrega</h3>
+            <div class="form-group">
+                <label for="rua">Rua:</label>
+                <input type="text" id="rua" name="rua" required>
+                <span class="error-message" id="error-rua"></span>
+            </div>
+            <div class="form-group">
+                <label for="numero">Número:</label>
+                <input type="text" id="numero" name="numero" required>
+                <span class="error-message" id="error-numero"></span>
+            </div>
+            <div class="form-group">
+                <label for="bairro">Bairro:</label>
+                <input type="text" id="bairro" name="bairro" required>
+                <span class="error-message" id="error-bairro"></span>
+            </div>
+            <div class="form-group">
+                <label for="cidade">Cidade:</label>
+                <input type="text" id="cidade" name="cidade" required>
+                <span class="error-message" id="error-cidade"></span>
+            </div>
+            <div class="form-group">
+                <label for="estado">Estado:</label>
+                <input type="text" id="estado" name="estado" required>
+                <span class="error-message" id="error-estado"></span>
+            </div>
+            <div class="form-group">
+                <label for="cep">CEP:</label>
+                <input type="text" id="cep" name="cep" required>
+                <span class="error-message" id="error-cep"></span>
+            </div>
+        </div>
+
+        <!-- Seção de Dados do Cartão (escondida por padrão) -->
+        <div class="cartao" id="cartao-section" style="display: none;">
+            <h3>Dados do Cartão</h3>
+            <div class="form-group">
+                <label for="nome-cartao">Nome no Cartão:</label>
+                <input type="text" id="nome-cartao" name="nome-cartao">
+                <span class="error-message" id="error-nome-cartao"></span>
+            </div>
+            <div class="form-group">
+                <label for="numero-cartao">Número do Cartão:</label>
+                <input type="text" id="numero-cartao" name="numero-cartao">
+                <span class="error-message" id="error-numero-cartao"></span>
+            </div>
+            <div class="form-group">
+                <label for="validade-cartao">Validade:</label>
+                <input type="text" id="validade-cartao" name="validade-cartao" placeholder="MM/AA">
+                <span class="error-message" id="error-validade-cartao"></span>
+            </div>
+            <div class="form-group">
+                <label for="cvv-cartao">CVV:</label>
+                <input type="text" id="cvv-cartao" name="cvv-cartao">
+                <span class="error-message" id="error-cvv-cartao"></span>
+            </div>
+        </div>
+
+        <div class="mensagem-compra" id="mensagem-compra" style="display: none;"></div> <!-- Elemento para a mensagem -->
+
+        <button class="btn-voltar" aria-label="Voltar à página inicial">Página Inicial</button>
+        <button class="btn-finalizar" aria-label="Finalizar compra">Finalizar Compra</button>
+    </section>
+    
+    <script src="carrinho.js"></script>
+</body>
+</html>
