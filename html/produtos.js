@@ -161,3 +161,32 @@ document.addEventListener('DOMContentLoaded', function() {
     window.filterItems = filterItems;
     window.submitReview = submitReview;
 });
+
+// Função para iniciar a filtragem dos produtos quando o formulário de pesquisa é submetido
+document.getElementById('search-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Impede o envio padrão do formulário
+    filterProducts();
+});
+
+function filterProducts() {
+    // Obter o termo de pesquisa
+    const searchTerm = document.getElementById('search-input').value.toLowerCase();
+    
+    // Selecionar todos os produtos (assumindo que os produtos estão em elementos com a classe 'item')
+    const products = document.querySelectorAll('.item');
+    
+    products.forEach(product => {
+        // Obter o nome e a descrição do produto
+        const productName = product.querySelector('h2').textContent.toLowerCase();
+        const productDescription = product.querySelector('p').textContent.toLowerCase();
+        
+        // Verificar se o termo de pesquisa está no nome ou na descrição
+        if (productName.includes(searchTerm) || productDescription.includes(searchTerm)) {
+            // Mostrar o produto se corresponder ao termo de pesquisa
+            product.style.display = 'block';
+        } else {
+            // Ocultar o produto se não corresponder ao termo de pesquisa
+            product.style.display = 'none';
+        }
+    });
+}
